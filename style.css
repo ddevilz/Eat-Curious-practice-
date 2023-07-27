@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;0,800;0,900;1,900&family=Rubik:wght@400;500;600;700;900&display=swap");
+
+:root {
+  --darkreader-bg--white: #380000;
+  --darkreader-text--white: #ffc6c6;
+  --darkreader-border--white: #690000;
+  --darkreader-bg--black: #032615;
+  --darkreader-text--black: #d8d5cf;
+  --grey: #d8d8d8;
+  --darkreader-bg--blue: #144d78;
+  --darkreader-text--blue: #7abbe9;
+  --darkreader-border--blue: #15517e;
+  --darkreader-bg--red: #94051f;
+  --darkreader-border--red: #94051f;
+  --darkreader-bg--green: #15985a;
+  --darkreader-text--green: #4de79f;
+  --darkreader-border--green: #17a764;
+  --darkgreen: #0a3f3d;
+  --darkreader-bg--lightgreen: #57640c;
+  --teal: #337f7d;
+  --yellow: #ffb500;
+  --darkreader-bg--pink: #870040;
+  --darkreader-text--pink: #ff6ab0;
+  --peach: #f8bf95;
+  --lightpeach: #fad4b8;
+  --orange: #f6aa72;
+  --cream: #fff7f3;
+  --mint: #ccdfde;
+  --color-dark: var(--black);
+  --darkreader-bg--color-light: var(--darkreader-bg--white);
+  --darkreader-bg--color-primary: var(--darkreader-bg--blue);
+  --darkreader-text--color-primary: var(--darkreader-text--blue);
+  --darkreader-border--color-primary: var(--darkreader-border--blue);
+  --color-secondary: var(--teal);
+  --color-success: #36ed9c;
+  --color-error: #ff3154;
+  --darkreader-text--text-color: var(--darkreader-text--white);
+  --darkreader-border--text-color: var(--darkreader-border--white);
+  --link-color: inherit;
+  --link-hover: var(--red);
+  --darkreader-bg--background: var(--darkreader-bg--black);
+  --darkreader-bg--accent-color: var(--darkreader-bg--pink);
+  --darkreader-bg--button-bg: var(--darkreader-bg--pink);
+  --darkreader-text--button-text: var(--darkreader-text--black);
+  --button-padding: 0.2em 0.7em 0.6em 0.7em;
+  --button-radius: 4px;
+  --content-width: calc(100% - 2rem);
+  --vpad: 40px;
+  --hpad: 25px;
+  --nav-height: 80px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  background-color: var(--darkgreen);
+}
+
+header {
+  height: var(--nav-height);
+}
+
+header {
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header li {
+  list-style: none;
+  color: var(--darkreader-text--white);
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.logo {
+  text-align: center;
+  font-size: 35px;
+  line-height: .9;
+  font-weight: 900;
+}
+
+.btn {
+  padding: var(--button-padding);
+  border-radius: var(--button-radius);
+  display: inline-block;
+  background: var(--darkreader-bg--pink);
+  border: none;
+}
+
+
+.mobile-btn {
+  position: absolute;
+  width: 30px;
+}
+
+.mobileMenu {
+  display: none;
+  visibility: hidden;
+  position: relative;
+  right: -5px;
+  width: 20px;
+  border-bottom: 2px solid #fff;
+}
+.mobileMenu::after,
+.mobileMenu::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  border-bottom: 2px solid #fff;
+}
+.mobileMenu::after {
+  top: -5px;
+}
+.mobileMenu::before {
+  top: 5px;
+}
+
+.navMobile{
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .mobileMenu {
+    display: inline-block;
+    visibility: visible;
+  }
+  .mobile-btn {
+    background-color: var(--color-error);
+    right: 25px;
+    border-radius: 3px;
+    height: 30px;
+  }
+  .nav {
+    display: none;
+  }
+
+  .navMobile.show{
+    text-align: center;
+    display: block;
+    background-color: var(--darkreader-bg--pink);
+    width: 100vw;
+    height: 10vh;
+    position: absolute;
+    /* right: 5px;
+    bottom: -30px; */
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;  
+  }
+
+  .nav.mobile{
+    display: block;
+    transition: ease;
+  }
+}
