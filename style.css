@@ -150,7 +150,7 @@ nav li {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /* padding: 100px 0; */
+  padding: 100px 0;
   min-width: 100vw;
 }
 
@@ -215,8 +215,6 @@ header.loaded .appear.delay:nth-child(2) {
     border-radius: 3px;
     height: 40px;
     z-index: 101;
-    transition: all 0.5s ease-in-out;
-
   }
 
   .nav {
